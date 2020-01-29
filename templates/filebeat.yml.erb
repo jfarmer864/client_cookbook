@@ -1,14 +1,12 @@
 filebeat:
   prospectors:
-    
-    paths:
-    - /var/log/syslog
+  -
+      paths:
+      - /var/log/syslog
     input_type: log
     document_type: syslog
 
-output:
-  elasticsearch:
-    hosts: ["localhost:9200"]
+  output:
   logstash:
     hosts: ["192.168.10.120:5044"]
 
