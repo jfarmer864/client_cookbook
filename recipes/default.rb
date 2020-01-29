@@ -24,3 +24,7 @@ end
 execute 'restart filebeat' do
   command '/etc/init.d/filebeat start'
 end
+
+execute 'test filebeat' do
+  command 'filebeat -c /etc/filebeat/filebeat.yml -e -v'
+end
