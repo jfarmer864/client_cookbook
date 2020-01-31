@@ -21,10 +21,4 @@ template '/etc/filebeat/filebeat.yml' do
   source 'filebeat.yml.erb'
 end
 
-execute 'restart filebeat' do
-  command '/etc/init.d/filebeat start'
-end
 
-execute 'test filebeat' do
-  command 'sudo filebeat -c /etc/filebeat/filebeat.yml -e -v'
-end
